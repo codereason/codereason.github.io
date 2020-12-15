@@ -1,28 +1,16 @@
-{% if site.comments_enabled and page.comments %}
-  <aside id="comments" class="disqus">
-
-    <div class="container">
-      <h3><i class="icon icon-comments-o"></i> Comments</h3>
-      <div id="disqus_thread"></div>
-
-      <script type="text/javascript">
-        var disqus_shortname = '{{ site.disqus_shortname }}';
-        var disqus_identifier = '{{ page.id }}';
-        var disqus_title = "{{ page.title }}";
-        var disqus_url = '{{ page.url | prepend: site.baseurl | prepend: site.url }}';
-        /*var disqus_developer = 1;*/
-
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-
-      <noscript>
-        Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
-      </noscript>
-    </div>
-
-  </aside>
-{% endif %}
+<!-- Gitment -->
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: '页面 ID', // 可选。默认为 location.href
+  owner: 'lszero',
+  repo: 'lszero.github.io',
+  oauth: {
+    client_id: '5cbd280dd9b27339aee6',
+    client_secret: '18164941d46a714a7577cb7d14e642936ad2ac16',
+  },
+})
+gitment.render('container')
+</script>

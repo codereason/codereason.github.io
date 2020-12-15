@@ -1,13 +1,35 @@
-# Thinkspace
+# Zero Jekyll Theme
 
-> Thinkspace is just another minimalist Jekyll theme which designed for technical writing blog.
+Zero a minimal two-column Jekyll theme based on bootstrap 3.
 
-[![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) ![GENERATOR](https://img.shields.io/badge/made_with-jekyll-blue.svg) ![VERSION](https://img.shields.io/badge/current_version-2.5-green.svg) ![TRAVIS-CI](https://travis-ci.org/heiswayi/thinkspace.svg?branch=master)
+## Features
 
-- **Demo:** https://heiswayi.github.io/thinkspace/
+- Tags & Categories
+- SideBar 
+- Table of Contents (support [Scrollspy](https://getbootstrap.com/docs/3.3/javascript/#scrollspy))
+- Latex support (MathJax)
+- Social icons
+- Code block highlighting
+- Mobile display
 
-![SCREENSHOT](https://i.imgur.com/1YS078k.png)
+##  Preview
 
-## License
+See [Demo](https://lszero.github.io/).
 
-[MIT](LICENSE.md)
+* Index
+
+  ![index](https://github.com/lszero/zero-theme/blob/master/img/demo-index.png)
+
+
+* Post - Table of Contents
+
+  ![Table of Contents](https://github.com/lszero/zero-theme/blob/master/img/demo-post.png)
+
+## Usage
+
+...
+
+
+
+
+

@@ -1,5 +1,5 @@
-<footer class="site-footer">
-  <div class="container">
-    <small class="block">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} &middot; &lt;/&gt; Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/heiswayi/thinkspace">Thinkspace theme</a></small>
+<footer class="footer">
+  <div class="copyright">
+      Copyright &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time> <a href="{{ site.url }}">{{ site.author }}</a> | Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> | Designed by <a href="{{ site.url }}">{{ site.author }}</a>
   </div>
 </footer>
