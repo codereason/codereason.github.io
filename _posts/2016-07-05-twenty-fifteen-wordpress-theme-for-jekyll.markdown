@@ -1,6 +1,12 @@
-# Twenty Fifteen Wordpress Theme for Jekyll
+---
+layout: post
+title:  "Twenty Fifteen Wordpress Theme for Jekyll"
+date:   2016-07-05 09:25:09 +0900
+category: Twenty-Fifteen
+image:  screenshot.png
+---
 
-![Twenty Fifteen Wordpress Theme for Jekyll](https://raw.githubusercontent.com/LeeKyuHyuk/twenty-fifteen-jekyll-theme/master/assets/image/screenshot.png)
+![Twenty Fifteen Wordpress Theme for Jekyll Screenshot]({{ site.url }}/assets/image/screenshot.png)
 
 ### Description
 Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
