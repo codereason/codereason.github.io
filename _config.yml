@@ -4,7 +4,10 @@ baseurl:             ""
 
 markdown:            kramdown
 highlighter:         rouge
-
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  
 exclude:             ['*.sublime-*', 'README.md', 'LICENSE', 'Gemfile', 'Gemfile.lock', 'vendor/bundle']
 
 permalink:           pretty
