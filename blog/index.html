@@ -1,0 +1,53 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h2 class="post-title" itemprop="name headline"><a itemtype="url"  href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+    <ul class="post-meta">
+      <li itemprop="author" itemscope itemtype="http://schema.org/Person">作者: <a itemprop="name" href="https://lovecia.com/author/1/" rel="author">admin</a></li>
+      <li>时间:   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time></li>
+      <li>分类: <a href="https://lovecia.com/category/2/">中文</a>,<a href="https://lovecia.com/category/ACT/">动作 ACT</a></li>
+      <li itemprop="interactionCount"><a itemprop="discussionUrl" href="https://lovecia.com/293/#comments">80 条评论</a></li>
+    </ul>
+    <div class="post-content" itemprop="articleBody">
+    {% if post.truncated_preview == true or site.blog.truncated_preview and post.truncated_preview != false %}
+    {{ post.excerpt }}
+    <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
+    {% else %}
+    {{ post.content }}
+    {% endif %}
+  </article>
+  {% endfor %}
+    </div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item" href="{{ paginator.next_page_path | prepend: site.baseurl }}">
+      <i class="fa fa-arrow-circle-o-left"></i> 
+      <span class="pagination-text">older posts</span>
+    </a>
+  {% else %}
+    <span class="pagination-item">
+      <i class="fa fa-arrow-circle-o-left"></i> 
+      <span class="pagination-text">older posts</span>
+    </span>
+  {% endif %}
+
+  <!-- <a class="pagination-item" href="#">archive</a> -->
+
+  {% if paginator.previous_page %}
+    <a class="pagination-item" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">
+      <span class="pagination-text">newer posts</span> 
+      <i class="fa fa-arrow-circle-o-right"></i>
+    </a>
+  {% else %}
+    <span class="pagination-item">
+      <span class="pagination-text">newer posts</span> 
+      <i class="fa fa-arrow-circle-o-right"></i>
+    </span>
+  {% endif %}
+</div>

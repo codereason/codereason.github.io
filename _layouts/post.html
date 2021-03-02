@@ -2,69 +2,18 @@
 layout: default
 ---
 
-<div class="container">
-  <div class="row-fluid main">
-    <div class="col-md-9 content">
-      <article class="post">
-        <h1 class="post-title">{{ page.title }}</h1>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <h2 class="post-title" itemprop="name headline"><a href="{{ site.baseurl }}{{ post.url }}"></a>{{ page.title }}</a></h2>
+  <ul class="post-meta">
+    <li itemprop="author" itemscope itemtype="http://schema.org/Person">作者: <a itemprop="name" href="https://lovecia.com/author/1/" rel="author">admin</a></li>
+    <li>时间:   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time></li>
+    <li>分类: <a href="https://lovecia.com/category/2/">中文</a>,<a href="https://lovecia.com/category/ACT/">动作 ACT</a></li>
+    <li itemprop="interactionCount"><a itemprop="discussionUrl" href="https://lovecia.com/293/#comments">80 条评论</a></li>
+  </ul>
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
 
-        <div class="post-info">
-          <span class="post-date">{{ page.date | date_to_string }}</span>
-          {% if page.categories.size > 0 %} | 
-            <span class="fa fa-folder-open" aria-hidden="true">
-            {% for category in page.categories %}
-              <a class="post-categories" href="{{ site.baseurl }}/categories.html#{{ category }}">{{ category }}</a>
-            {% endfor %}
-            </span>
-          {% endif %}
-          {% if page.tags.size > 0 %} | 
-            <span class="fa fa-tag" aria-hidden="true">
-            {% for tag in page.tags %}
-              <a class="post-tags" href="{{ site.baseurl }}/tags.html#{{ tag }}">{{ tag }}</a>
-            {% endfor %}
-            </span>
-          {% endif %}
-        </div>
-
-        <hr>
-        <div class="post-content">
-          {{ content }}
-        </div>
-        <br><br>
-      </article>
-
-      <nav class="post-pagination">
-        {% if page.previous %}
-        <a href="{{ site.baseurl }}{{ page.previous.url }}" class="btn previous" title="{{ page.previous.title }}">&larr; {{ page.previous.title }}</a>
-        {% endif %}
-        {% if page.next %}
-        <a href="{{ site.baseurl }}{{ page.next.url }}" class="btn next" title="{{ page.next.title }}">{{ page.next.title }} &rarr;</a>
-        {% endif %}
-      </nav>
-
-      <hr>
-
-      {% if site.related_posts != empty %}
-      <aside class="related">
-        <h3>Related Posts</h3>
-        <ul class="related-posts">
-          {% for post in site.related_posts limit:3 %}
-            <li>
-              <a href="{{ site.baseurl }}{{ post.url }}">
-                {{ post.title }}
-                <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </aside>
-      {% endif %}
-
-      {% include {{ site.baseurl }}comments.html %}
-    </div>
-    
-    <div class="col-md-3 post-sidebar">
-      {% include {{ site.baseurl }}sidebar_post.html %}
-    </div>
   </div>
-</div>
+
+
+</article>

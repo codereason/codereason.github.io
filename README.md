@@ -1,35 +1,11 @@
-# Zero Jekyll Theme
+# celeste
 
-Zero a minimal two-column Jekyll theme based on bootstrap 3.
+Celeste is a lightweight Jekyll theme that features a minimalist, content-first design. It places your content center stage and lets your readers view them in a clutter-free environment without visual distractions. It is based on [Poole](https://github.com/poole/poole), the Jekyll butler, by [@mdo](https://github.com/mdo).
 
-## Features
+![Celeste Preview](https://user-images.githubusercontent.com/4868132/48317284-981f4080-e62a-11e8-94e4-f3d7db9506a7.png)
 
-- Tags & Categories
-- SideBar 
-- Table of Contents (support [Scrollspy](https://getbootstrap.com/docs/3.3/javascript/#scrollspy))
-- Latex support (MathJax)
-- Social icons
-- Code block highlighting
-- Mobile display
+You can check out Celeste in action in [the demo site](https://nicoelayda.github.io/celeste).
 
-##  Preview
+## License
 
-See [Demo](https://lszero.github.io/).
-
-* Index
-
-  ![index](https://github.com/lszero/zero-theme/blob/master/img/demo-index.png)
-
-
-* Post - Table of Contents
-
-  ![Table of Contents](https://github.com/lszero/zero-theme/blob/master/img/demo-post.png)
-
-## Usage
-
-...
-
-
-
-
-
+MIT. See [LICENSE](https://github.com/nicoelayda/celeste/blob/master/LICENSE).
